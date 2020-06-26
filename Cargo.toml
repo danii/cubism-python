@@ -1,14 +1,16 @@
 [package]
-name = "live2d-python"
+name = "cubism"
 version = "0.1.0"
 authors = ["Daniel Conley <danielc030417@gmail.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [lib]
-crate-type = ["dylib"]
+crate-type = ["cdylib"]
+name = "cubism"
 
 [dependencies]
-cubism = {git = "https://github.com/Veykril/cubism-rs.git"}
-pyo3 = "0.10"
+cubism = {git = "https://github.com/Veykril/cubism-rs.git", default-features = false}
+pyo3 = {version = "0.9", features = ["extension-module"]}
+
+[build-dependencies]
+bindgen = "0.54.0"
