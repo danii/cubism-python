@@ -1,3 +1,4 @@
+#[macro_use]
 extern crate ferris_print;
 use cubism::core::version;
 use pyo3::{
