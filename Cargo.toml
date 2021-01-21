@@ -11,6 +11,7 @@ name = "cubism"
 [dependencies]
 cubism = {git = "https://github.com/Veykril/cubism-rs.git", default-features = false}
 pyo3 = {version = "0.9", features = ["extension-module"]}
+ferris_print = "0.1.0"
 
 [build-dependencies]
 bindgen = "0.54.0"

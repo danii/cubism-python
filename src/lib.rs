@@ -1,3 +1,4 @@
+extern crate ferris_print;
 use cubism::core::version;
 use pyo3::{
 	prelude::{PyModule, PyResult, Python, pyfunction, pymodule},
@@ -6,7 +7,7 @@ use pyo3::{
 
 #[pymodule(cubism)]
 pub fn init(_: Python, module: &PyModule) -> PyResult<()> {
-	println!("Initialized!");
+	ferrisprint!("Initialized!");
 	module.add_wrapped(wrap_pyfunction!(get_version))?;
 	Ok(())
 }
